@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "4e926147-1df1-4018-941e-20e680d988f2",
+		"name": "desafio_escribo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26465890",
+		"_collection_link": "https://restless-shadow-743853.postman.co/workspace/Nest_api~fe0b1846-86ea-4f54-8f7d-6b2a9f733cb1/collection/26465890-4e926147-1df1-4018-941e-20e680d988f2?action=share&source=collection_link&creator=26465890"
+	},
+	"item": [
+		{
+			"name": "registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"emesrson\",\r\n    \"email\":\"emersoaaasam@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"cell\": {\r\n    \"number\": 1234565789,\r\n    \"ddd\": 121\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/auth/register/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTYzMTM4MTM1MzY1MmQzMDFkNThmNTIiLCJjcmVhdGVkQXQiOiIyMDIzLTExLTI2VDA5OjQ0OjMzLjM1MVoiLCJ1cGRhdGVkQXQiOiIyMDIzLTExLTI2VDA5OjQ0OjQ3Ljk0OFoiLCJsYXN0QWNjZXNzZWRBdCI6IjIwMjMtMTEtMjZUMDk6NDQ6NDcuOTQ2WiIsImlhdCI6MTcwMDk5MTg4OCwiZXhwIjoxNzAwOTkzNjg4fQ.16guoSq6WtoA-kHuZbj-azUCbVqh6q4BYhTyUeOo8qw\"",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/admin/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"emersoaaasam90000000@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/auth/authenticate/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"authenticate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Emerson\",\r\n    \"email\": \"sdasd@gmai.com\",\r\n    \"senha\":\"asdsdasd12133\",\r\n    \"telefone\": [{ \"numero\": 123456789, \"ddd\": 11 }]\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/auth/registro",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"sdasd@gmai.com\",\r\n    \"senha\":\"asdsdasd12133\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/auth/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
